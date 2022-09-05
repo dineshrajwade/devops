@@ -13,7 +13,7 @@ RUN yum -y install java
 RUN java -version
 
 WORKDIR /opt/tomcat/webapps
-RUN cp /var/lib/jenkins/workspace/maven-git/webapp/target/webapp.war /opt/tomcat/webapps
+RUN cp /var/lib/jenkins/workspace/maven-git/webapp/target/webapp.war /opt/tomcat/webapps/
 EXPOSE 8080
 
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]
