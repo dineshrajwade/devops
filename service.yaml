@@ -1,15 +1,13 @@
-apiVersion: v1
 kind: Service
+apiVersion: v1
 metadata:
-  name: tomcattest1-service  
+  name: myservice
   labels:
-    app: tomcattest1-service
+    native: tomcattest1
 spec:
-  ports:
-  - nodePort: 30800
-    port: 8080
-    protocol: TCP
-    targetPort: 8080
-  selector:
-    app: tomcattest1-service
-  type: NodePort
+ selector:
+   region: south 
+ type: NodePort
+ ports:
+ - port: 8080
+   targetPort: 8080
