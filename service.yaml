@@ -6,7 +6,7 @@ metadata:
     native: tomcattest1
 spec:
  selector:
-   region: south 
+   region: tomcattest1
  type: NodePort
  ports:
  - port: 8080
