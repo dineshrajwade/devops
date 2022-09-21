@@ -8,3 +8,5 @@ spec:
   containers:
   - name: tomcattest1
     image: dineshrajwade/tomcat_new1
+  selector:
+    region: tomcattest1  
