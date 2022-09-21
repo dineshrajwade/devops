@@ -3,7 +3,7 @@ apiVersion: apps/v1
 metadata:
   name: testdeploy
   labels:
-    city: chennai
+    city: chennaii
 spec:
   selector:
    matchLabels:
