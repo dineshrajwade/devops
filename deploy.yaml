@@ -1,14 +1,10 @@
-apiVersion: v1
 kind: Pod
+apiVersion: v1
 metadata:
   name: tomcattest1
   labels:
-    role: tomcattest1-role
     app: tomcattest1
 spec:
   containers:
   - name: tomcattest1
-    image: dineshrajwade/tomcat_new1:latest
-    ports:
-     - containerPort:8080
-  
+    image: dineshrajwade/tomcat_new1
