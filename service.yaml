@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: myservice
   labels:
-    native: tomcattest1
+    app: tomcattest1
 spec:
  selector:
    region: tomcattest1
