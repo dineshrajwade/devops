@@ -3,10 +3,10 @@ apiVersion: v1
 metadata:
   name: myservice
   labels:
-    app: tomcattest1
+    native: kanyakumari
 spec:
  selector:
-   region: tomcattest1
+   region: south 
  type: NodePort
  ports:
  - port: 8080
