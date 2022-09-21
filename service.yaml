@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tomcattest1-service  
+  labels:
+    app: tomcattest1-service
+spec:
+  ports:
+  - nodePort: 30800
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: tomcattest1-service
+  type: NodePort
