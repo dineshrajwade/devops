@@ -1,12 +1,20 @@
-kind: Pod
-apiVersion: v1
+kind: Deployment
+apiVersion: apps/v1
 metadata:
-  name: tomcattest1
+  name: testdeploy
   labels:
-    app: tomcattest1
+    city: chennai
 spec:
-  containers:
-  - name: tomcattest1
-    image: dineshrajwade/tomcat_new1
   selector:
-    region: tomcattest1  
+   matchLabels:
+     region: south
+  replicas: 1
+  template:
+    metadata:
+     name: testpod
+     labels:
+      region: south
+    spec:
+     containers:
+     - name: tomcattest1 
+       image: dineshrajwade/tomcat_new1
