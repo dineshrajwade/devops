@@ -8,14 +8,22 @@ agent any
 stages {
 stage('Cloning our Git') {
 steps {
-git 'https://github.com/dineshrajwade/devops.git'
+git credentialsId: 'gitid', url: 'https://github.com/dineshrajwade/devops.git'
+
 }
 }
+stage('build code') {
+steps {
+sh "mvn clean install"
+
+}
+}
+
 stage('Building our image') {
 steps{
 script {
 sh "rm -f webapp.war"
-sh "cp /var/lib/jenkins/workspace/maven-git/webapp/target/webapp.war ." 
+sh "cp /var/lib/jenkins/workspace/kubernates_test/webapp/target/webapp.war ." 
 sh "ls -lrth"
 sh "pwd"
 docker.build dockerImage
