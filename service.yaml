@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: myservice
+  name: testdeploy
   labels:
     native: kanyakumari
 spec:
