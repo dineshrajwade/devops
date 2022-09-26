@@ -17,4 +17,4 @@ spec:
     spec:
      containers:
      - name: tomcattest1 
-       image: dineshrajwade/tomcat_new:v1
+       image: dineshrajwade/tomcat_new1
